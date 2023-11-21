@@ -1,17 +1,22 @@
 fn main() {
-    let a = 3;
-
-    if a < 5 {
-        println!("condition was true");
-    } else {
-        println!("condition was false");
-    }
-    testif();
+    func1();
+    func2();
+    func3();
+    
 }
 
-fn testif() {
-    let b = 5;
+fn func1() {
+    let a = 3;
+    if a < 5 {
+        println!("Condition was true");
+    } else {
+        println!("Condition was false");
+    }
+}
 
+fn func2() {
+    let b = 5;
+    
     if b % 4 == 0 {
         println!("Число делится на 4.");
     } else if b % 3 == 0 {
@@ -21,4 +26,8 @@ fn testif() {
     } else {
         println!("Число не делится ни на 4, ни 3, ни на 2.");
     }
+}
+
+fn func3() {
+    
 }
