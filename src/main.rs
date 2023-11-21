@@ -1,12 +1,15 @@
+use std::result;
+
 fn main() {
     func1();
     func2();
     func3();
+    func4();
     
 }
 
-fn func1() {
-    let a = 3;
+fn func1() { // if
+    let a: i32 = 3;
     if a < 5 {
         println!("Condition was true");
     } else {
@@ -14,8 +17,8 @@ fn func1() {
     }
 }
 
-fn func2() {
-    let b = 5;
+fn func2() { // else if
+    let b: i32 = 5;
     
     if b % 4 == 0 {
         println!("Число делится на 4.");
@@ -28,8 +31,21 @@ fn func2() {
     }
 }
 
-fn func3() {
-    let condition = true;
-    let number = if condition { 5 } else { 6 };
+fn func3() { // let + if
+    let condition: bool = true;
+    let number: i32 = if condition { 5 } else { 6 };
     println!("Значение числа: {number}");  
+}
+
+fn func4() {
+    let mut counter: i32 = 0;
+    let result: i32 = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+
+    println!("Результат равен: {result}");
 }
