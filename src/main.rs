@@ -67,6 +67,7 @@ fn func6() {
         println!("Значние: {}", a[index]);
         index += 1;
     }
+    
 }
 
 
